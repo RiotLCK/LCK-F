@@ -36,3 +36,4 @@ jest.config.js
 # 기타
 .idea/
 *.log
+
