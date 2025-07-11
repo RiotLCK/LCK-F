@@ -1,3 +1,7 @@
 export default function Home() {
-  return <div>he</div>;
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-black text-white">
+      메인 페이지
+    </div>
+  );
 }
