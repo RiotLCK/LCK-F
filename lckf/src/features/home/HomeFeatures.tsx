@@ -22,7 +22,6 @@ export default function HomeFeatures() {
             key={index}
             className="flex-1 bg-gray-900 p-6 rounded-lg border border-gray-800 hover:border-blue-500 transition-colors cursor-pointer"
           >
-            <div className="text-blue-400 text-2xl mb-3">{feature.icon}</div>
             <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
             <p className="text-gray-400 text-sm">{feature.description}</p>
           </div>
