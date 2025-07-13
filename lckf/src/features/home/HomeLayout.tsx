@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import HomeSearch from "./HomeSearch";
 import HomeFeatures from "./HomeFeatures";
+import TestApi from "@/features/test/TestApi";
 
 export default function HomeLayout() {
   return (
@@ -11,6 +12,9 @@ export default function HomeLayout() {
         <div className="max-w-6xl mx-auto px-4 py-8 w-full">
           <HomeSearch />
           <HomeFeatures />
+          <div className="mt-8">
+            <TestApi />
+          </div>
         </div>
       </main>
       <Footer show={true} />
