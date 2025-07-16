@@ -44,7 +44,7 @@ export default function TestApi() {
   };
 
   return (
-    <div className="p-6 bg-gray-900 rounded-lg">
+    <div className="p-6 rounded-lg">
       <h3 className="text-xl font-bold mb-4 text-white">API 테스트</h3>
 
       <div className="space-y-4">

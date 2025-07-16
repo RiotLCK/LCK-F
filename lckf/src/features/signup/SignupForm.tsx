@@ -122,11 +122,11 @@ export default function SignupForm() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white flex flex-col">
+    <div className="min-h-screen text-white flex flex-col">
       <Header showNav={false} />
-      <div className="flex-1 flex items-center justify-center">
-        <div className="w-full max-w-md p-8 border border-gray-800 rounded-lg bg-gray-950 shadow-lg">
-          <h2 className="mb-6 text-2xl font-bold text-center text-white">
+      <main className="flex-1 flex items-center justify-center bg-gradient-to-br from-gray-900 via-black to-gray-800">
+        <div className="w-full max-w-md p-8 shadow-xl shadow-black/20">
+          <h2 className="mb-6 text-2xl font-bold text-center text-slate-100">
             회원가입
           </h2>
           <form onSubmit={handleSubmit} className="flex flex-col gap-5">
@@ -140,14 +140,14 @@ export default function SignupForm() {
                   onChange={handleChange}
                   required
                   disabled={isLoading}
-                  className="w-full px-3 py-2 border border-gray-700 rounded bg-gray-900 text-white focus:outline-none focus:ring-2 focus:ring-blue-400 disabled:opacity-50"
+                  className="w-full px-3 py-2 border border-gray-700 rounded bg-gray-800 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400 disabled:opacity-50"
                 />
               </div>
               <button
                 type="button"
                 onClick={handleCheckNickname}
                 disabled={isLoading || isCheckingNickname}
-                className="px-3 py-2 bg-white text-black rounded hover:bg-gray-200 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                className="px-3 py-2 btn-outline rounded font-semibold transition-colors cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isCheckingNickname ? "확인중..." : "중복확인"}
               </button>
@@ -162,14 +162,14 @@ export default function SignupForm() {
                   onChange={handleChange}
                   required
                   disabled={isLoading}
-                  className="w-full px-3 py-2 border border-gray-700 rounded bg-gray-900 text-white focus:outline-none focus:ring-2 focus:ring-blue-400 disabled:opacity-50"
+                  className="w-full px-3 py-2 border border-gray-700 rounded bg-gray-800 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400 disabled:opacity-50"
                 />
               </div>
               <button
                 type="button"
                 onClick={handleCheckEmail}
                 disabled={isLoading || isCheckingEmail}
-                className="px-3 py-2 bg-white text-black rounded hover:bg-gray-200 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                className="px-3 py-2 btn-outline rounded font-semibold transition-colors cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isCheckingEmail ? "확인중..." : "중복확인"}
               </button>
@@ -184,7 +184,7 @@ export default function SignupForm() {
                 required
                 disabled={isLoading}
                 minLength={6}
-                className="w-full px-3 py-2 border border-gray-700 rounded bg-gray-900 text-white focus:outline-none focus:ring-2 focus:ring-blue-400 disabled:opacity-50"
+                className="w-full px-3 py-2 border border-gray-700 rounded bg-gray-800 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400 disabled:opacity-50"
               />
             </div>
             <div>
@@ -195,7 +195,7 @@ export default function SignupForm() {
                 onChange={(e) => setConfirmPassword(e.target.value)}
                 required
                 disabled={isLoading}
-                className="w-full px-3 py-2 border border-gray-700 rounded bg-gray-900 text-white focus:outline-none focus:ring-2 focus:ring-blue-400 disabled:opacity-50"
+                className="w-full px-3 py-2 border border-gray-700 rounded bg-gray-800 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400 disabled:opacity-50"
               />
             </div>
             {error && (
@@ -209,13 +209,13 @@ export default function SignupForm() {
             <button
               type="submit"
               disabled={isLoading}
-              className="py-3 bg-white text-black font-semibold rounded hover:bg-gray-200 transition-colors cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+              className="py-3 btn-gradient font-semibold rounded-lg transition-colors cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed shadow-md shadow-black/10"
             >
               {isLoading ? "회원가입 중..." : "회원가입"}
             </button>
           </form>
         </div>
-      </div>
+      </main>
       <Footer show={false} />
     </div>
   );

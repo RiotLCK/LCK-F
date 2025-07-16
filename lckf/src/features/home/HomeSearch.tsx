@@ -10,7 +10,7 @@ export default function HomeSearch() {
           <input
             type="text"
             placeholder="소환사명을 입력하세요"
-            className="flex-1 px-4 py-3 bg-gray-900 border border-gray-700 rounded-l text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="flex-1 px-4 py-3 border border-gray-700 rounded-l text-white placeholder-gray-500"
           />
           <button className="px-6 py-3 bg-slate-800 hover:bg-slate-900 text-white rounded transition-colors cursor-pointer">
             입력
