@@ -76,22 +76,27 @@ export interface PlayStyleAnalysis {
 
 // 커뮤니티 게시글 타입
 export interface Post {
-  id: string;
+  id: number;
   title: string;
   content: string;
-  author: User;
-  likes: number;
-  comments: Comment[];
+  category: string;
+  author: string;
   createdAt: string;
-  updatedAt: string;
+  updatedAt: string | null;
+}
+
+// 게시글 생성/수정 요청용 타입
+export interface PostRequest {
+  title: string;
+  content: string;
 }
 
 // 댓글 타입
 export interface Comment {
-  id: string;
+  id: number;
   content: string;
-  author: User;
-  postId: string;
+  author: string;
   createdAt: string;
-  updatedAt: string;
+  likeCount: number;
+  likedByCurrentUser: boolean;
 }
